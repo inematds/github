@@ -1,0 +1,379 @@
+/* Reset e Variáveis */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #24292e;
+    --secondary-color: #0366d6;
+    --accent-color: #28a745;
+    --bg-color: #ffffff;
+    --code-bg: #f6f8fa;
+    --border-color: #e1e4e8;
+    --text-color: #24292e;
+    --text-light: #586069;
+    --header-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Tipografia */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+/* Header */
+header {
+    background: var(--header-bg);
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+header .subtitle {
+    font-size: 1.2rem;
+    opacity: 0.95;
+}
+
+/* Navegação */
+nav {
+    background: var(--primary-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin: 0;
+}
+
+.nav-menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: 500;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    background-color: var(--secondary-color);
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Main Content */
+main {
+    padding: 2rem 1.5rem;
+}
+
+/* Módulos */
+.module {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.module h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 3px solid var(--accent-color);
+}
+
+.module h3 {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.module h4 {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Content Blocks */
+.content-block {
+    margin-bottom: 2rem;
+}
+
+.content-block:last-child {
+    margin-bottom: 0;
+}
+
+.content-block ul,
+.content-block ol {
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.content-block li {
+    margin-bottom: 0.5rem;
+}
+
+/* Code Blocks */
+code {
+    background-color: var(--code-bg);
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9em;
+    color: #e83e8c;
+}
+
+pre {
+    background-color: var(--code-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 1rem;
+    overflow-x: auto;
+    margin: 1rem 0;
+}
+
+pre code {
+    background: none;
+    padding: 0;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Links */
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Good/Bad Examples */
+.good-bad-examples {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.good, .bad {
+    padding: 1rem;
+    border-radius: 6px;
+}
+
+.good {
+    background-color: #f0fff4;
+    border: 1px solid #9ae6b4;
+}
+
+.bad {
+    background-color: #fff5f5;
+    border: 1px solid #fc8181;
+}
+
+.good h4 {
+    color: #22543d;
+}
+
+.bad h4 {
+    color: #742a2a;
+}
+
+/* Exercise */
+.exercise {
+    background-color: #fffbeb;
+    border: 2px solid #f59e0b;
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+/* Cheat Sheet */
+.cheatsheet {
+    background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+}
+
+.cheat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.cheat-category {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+}
+
+.cheat-category h3 {
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+/* Congratulations Section */
+.congratulations {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    padding: 3rem 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.congratulations h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    border: none;
+    color: white;
+}
+
+.congratulations p {
+    font-size: 1.2rem;
+}
+
+/* Footer */
+footer {
+    background: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+footer a {
+    color: var(--accent-color);
+}
+
+footer a:hover {
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header .subtitle {
+        font-size: 1rem;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+    }
+
+    .nav-menu a {
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .module {
+        padding: 1.5rem;
+    }
+
+    .module h2 {
+        font-size: 1.5rem;
+    }
+
+    .module h3 {
+        font-size: 1.2rem;
+    }
+
+    .good-bad-examples {
+        grid-template-columns: 1fr;
+    }
+
+    .cheat-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .congratulations h2 {
+        font-size: 2rem;
+    }
+
+    .congratulations p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .module {
+        padding: 1rem;
+    }
+
+    pre {
+        padding: 0.75rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* Scroll Behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Selection */
+::selection {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+/* Scrollbar (Webkit) */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--code-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-light);
+}
