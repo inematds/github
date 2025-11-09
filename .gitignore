@@ -1,0 +1,7 @@
+node_modules/
+.bmad-core/
+.claude/
+package-lock.json
+*.log
+.env
+.DS_Store
